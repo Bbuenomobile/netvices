@@ -1,0 +1,70 @@
+---
+
+---
+
+<div id="age-gate" class="fixed inset-0 z-[9999] flex items-center justify-center bg-vice-darker/98 backdrop-blur-xl">
+  <div class="max-w-md mx-auto px-6 text-center">
+    <!-- Neon border card -->
+    <div class="p-8 sm:p-10 rounded-3xl border border-vice-pink/40 bg-vice-card relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-vice-magenta/10 via-transparent to-vice-cyan/10"></div>
+
+      <div class="relative z-10">
+        <!-- Warning icon -->
+        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-vice-pink/20 flex items-center justify-center border border-vice-pink/30">
+          <svg class="w-10 h-10 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+
+        <!-- Title -->
+        <h2 class="font-[Bungee] text-3xl text-vice-pink neon-text mb-3">18+ ONLY</h2>
+
+        <!-- Text -->
+        <p class="font-[Rajdhani] text-gray-300 mb-2 text-lg">
+          This website contains adult content.
+        </p>
+        <p class="font-[Rajdhani] text-gray-500 mb-8 text-sm">
+          By entering, you confirm that you are at least 18 years old and agree to our Terms of Service.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col gap-3">
+          <button
+            id="age-confirm"
+            class="w-full py-4 rounded-xl font-[Orbitron] text-sm uppercase tracking-wider font-bold text-white bg-gradient-to-r from-vice-magenta to-vice-pink hover:from-vice-pink hover:to-vice-magenta transition-all duration-300 hover:scale-105"
+            style="box-shadow: 0 0 20px rgba(232,0,130,0.4);"
+          >
+            I am 18 or older — Enter
+          </button>
+          <a
+            href="https://google.com"
+            class="w-full py-3 rounded-xl font-[Orbitron] text-xs uppercase tracking-wider font-bold text-gray-500 border border-gray-700 hover:border-gray-500 transition-all duration-300"
+          >
+            I am under 18 — Leave
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const gate = document.getElementById('age-gate');
+  const confirmBtn = document.getElementById('age-confirm');
+
+  if (localStorage.getItem('netvices_age_verified') === 'true') {
+    gate?.remove();
+  }
+
+  confirmBtn?.addEventListener('click', () => {
+    localStorage.setItem('netvices_age_verified', 'true');
+    gate?.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => gate?.remove(), 500);
+  });
+</script>
+
+<style>
+  #age-gate {
+    transition: opacity 0.5s ease;
+  }
+</style>

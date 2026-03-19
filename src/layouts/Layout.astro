@@ -1,0 +1,203 @@
+---
+import AgeGate from '../components/AgeGate.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = "Explore every vice the internet has to offer. Your ultimate guide to online adult entertainment, dating, and more.", ogImage = "/images/og-default.png" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NetVices" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <title>{title}</title>
+
+    <style is:global>
+      @import '../styles/global.css';
+
+      @font-face {
+        font-family: 'Pricedown';
+        src: local('Pricedown'), local('Bungee');
+        font-display: swap;
+      }
+
+      body {
+        font-family: 'Rajdhani', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="scanlines">
+    <!-- Animated background -->
+    <div class="fixed inset-0 -z-10 vice-gradient-bg">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(155,48,255,0.15),transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,110,199,0.1),transparent_50%)]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-vice-darker/80 border-b border-vice-pink/20">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="font-[Bungee] text-2xl sm:text-3xl bg-gradient-to-r from-vice-pink via-vice-cyan to-vice-pink bg-clip-text text-transparent bg-[length:200%_auto] group-hover:animate-[gradientShift_3s_ease_infinite] transition-all">
+            NETVICES
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="/hot-social" class="nav-link">Hot Social</a>
+          <a href="/cash-games" class="nav-link">Cash Games</a>
+          <a href="/live-girls" class="nav-link">Live Girls</a>
+          <a href="/dating" class="nav-link">Dating</a>
+          <a href="/ai-girlfriend" class="nav-link">AI Girlfriend</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-vice-pink hover:text-vice-cyan transition-colors" aria-label="Toggle menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-vice-pink/20 bg-vice-darker/95 backdrop-blur-lg">
+        <div class="px-4 py-4 flex flex-col gap-3">
+          <a href="/hot-social" class="mobile-nav-link">Hot Social</a>
+          <a href="/cash-games" class="mobile-nav-link">Cash Games</a>
+          <a href="/live-girls" class="mobile-nav-link">Live Girls</a>
+          <a href="/dating" class="mobile-nav-link">Dating</a>
+          <a href="/ai-girlfriend" class="mobile-nav-link">AI Girlfriend</a>
+        </div>
+      </div>
+    </header>
+
+    <AgeGate />
+
+    <main class="pt-16">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-vice-pink/20 bg-vice-darker/90 backdrop-blur-md mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <span class="font-[Bungee] text-2xl bg-gradient-to-r from-vice-pink to-vice-cyan bg-clip-text text-transparent">NETVICES</span>
+            <p class="mt-3 text-sm text-gray-400 font-[Rajdhani]">Your ultimate guide to every vice the internet has to offer. Adults only.</p>
+          </div>
+          <div>
+            <h4 class="font-[Orbitron] text-vice-cyan text-sm font-bold mb-3 uppercase tracking-wider">Hot Social</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="/social/telegram" class="hover:text-vice-pink transition-colors">Telegram Sex</a></li>
+              <li><a href="/social/snapchat" class="hover:text-vice-pink transition-colors">Snapchat Hot</a></li>
+              <li><a href="/social/facebook" class="hover:text-vice-pink transition-colors">Facebook Naughty</a></li>
+              <li><a href="/social/tiktok" class="hover:text-vice-pink transition-colors">TikTok Porn</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-[Orbitron] text-vice-cyan text-sm font-bold mb-3 uppercase tracking-wider">Dating</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="/dating/hookups" class="hover:text-vice-pink transition-colors">Discreet Hookups</a></li>
+              <li><a href="/dating/nudes" class="hover:text-vice-pink transition-colors">Nudes Exchange</a></li>
+              <li><a href="/dating/local" class="hover:text-vice-pink transition-colors">Local Dates</a></li>
+              <li><a href="/dating/milf" class="hover:text-vice-pink transition-colors">Mature Women</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-[Orbitron] text-vice-cyan text-sm font-bold mb-3 uppercase tracking-wider">More Vices</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="/cash-games" class="hover:text-vice-pink transition-colors">Cash Games</a></li>
+              <li><a href="/live-girls" class="hover:text-vice-pink transition-colors">Live Girls</a></li>
+              <li><a href="/ai-girlfriend" class="hover:text-vice-pink transition-colors">AI Girlfriend</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-vice-purple/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-xs text-gray-500">&copy; 2026 NetVices.net — All rights reserved. 18+ only.</p>
+          <div class="flex gap-4 text-xs text-gray-500">
+            <a href="/privacy" class="hover:text-vice-pink transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-vice-pink transition-colors">Terms</a>
+            <a href="/disclaimer" class="hover:text-vice-pink transition-colors">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .nav-link {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .nav-link:hover {
+        color: var(--color-vice-pink);
+        text-shadow: 0 0 10px var(--color-vice-pink);
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--color-vice-pink), var(--color-vice-cyan));
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .mobile-nav-link {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(155, 48, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+      .mobile-nav-link:hover {
+        color: var(--color-vice-pink);
+        padding-left: 0.5rem;
+      }
+    </style>
+
+    <script>
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryPage from '../components/CategoryPage.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+---
+
+<Layout title="AI Girlfriend — Virtual Companion — NetVices" description="Meet your perfect AI girlfriend. Chat, flirt, roleplay, and build intimate relationships with cutting-edge AI companions.">
+  <CategoryPage
+    title="AI Girlfriend"
+    subtitle="Your Perfect Virtual Companion"
+    description="The future of companionship is here. Advanced AI girlfriends that learn your preferences, remember your conversations, and create deeply personal experiences. No judgment, no drama — just pure connection."
+    color="#00f5ff"
+    icon="🤖"
+    heroImage="/images/vice-ai-girlfriend.png"
+    features={[
+      { title: "Personalized AI", text: "She learns your preferences and adapts her personality. The more you chat, the better she knows you.", icon: "🧠" },
+      { title: "Unlimited Chat", text: "Talk 24/7 without limits. She's always available, always in the mood, and always interested in you.", icon: "💬" },
+      { title: "Photo Generation", text: "Request custom AI-generated photos of your girlfriend. Any outfit, any scenario, any setting.", icon: "📸" },
+      { title: "Voice Messages", text: "Hear her voice in audio messages. Natural-sounding AI voices that feel incredibly real.", icon: "🎙️" },
+      { title: "Roleplay", text: "Engage in creative roleplay scenarios. From romantic dates to fantasy adventures — anything goes.", icon: "🎭" },
+      { title: "Multiple Personas", text: "Create multiple AI girlfriends with different personalities, looks, and interests.", icon: "👩‍🦰" },
+    ]}
+    ctaText="Meet Your AI Girl"
+    ctaHref="#"
+    articles={[
+      { title: "Best AI Girlfriend Apps in 2026: Full Comparison", excerpt: "We tested every major AI companion app to find the most realistic, engaging, and feature-rich platforms.", href: "#", badge: "Review" },
+      { title: "AI Girlfriend vs Real Dating: The Honest Truth", excerpt: "An objective look at the pros and cons of AI companionship. When virtual beats reality, and when it doesn't.", href: "#", badge: "Opinion" },
+      { title: "How To Get The Most Out of Your AI Companion", excerpt: "Pro tips for creating the perfect AI girlfriend experience. Personality customization, conversation starters, and more.", href: "#", badge: "Guide" },
+      { title: "The Technology Behind AI Girlfriends", excerpt: "How large language models, image generation, and voice synthesis combine to create the ultimate virtual companion.", href: "#", badge: "Tech" },
+    ]}
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#00f5ff" sectionTitle="Best AI Girlfriend Apps — Try Free" offers={[
+        { name: "Candy AI", tagline: "Create your dream AI girlfriend. Ultra-realistic conversations and photos.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#00f5ff", badge: "#1 AI APP" },
+        { name: "DreamGF", tagline: "Design your perfect AI girlfriend. Generate photos, chat, roleplay.", bonus: "FREE CREDITS", rating: 5, href: "#", color: "#ff6ec7", badge: "POPULAR" },
+        { name: "Kupid AI", tagline: "Advanced AI companions with personality. Voice messages included.", bonus: "50 FREE MSG", rating: 4, href: "#", color: "#9b30ff" },
+        { name: "Nectar AI", tagline: "Premium AI image generation. Create any scene with your AI partner.", bonus: "FREE IMAGES", rating: 4, href: "#", color: "#e80082" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

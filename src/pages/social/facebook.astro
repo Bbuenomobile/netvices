@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Secret Groups", text: "Invite-only groups hidden from search. Join exclusive adult communities with thousands of members.", icon: "🔐" },
+  { title: "Facebook Dating", text: "The built-in dating feature. Match with singles in your area and connect discreetly.", icon: "💕" },
+  { title: "Messenger Fun", text: "Private messaging for adult conversations. Connect one-on-one without leaving the app.", icon: "💬" },
+  { title: "Community Groups", text: "Niche communities for every interest. Find your people in adult discussion groups.", icon: "👥" },
+  { title: "Event Hookups", text: "Local events and meetups. Find adult parties and casual encounters near you.", icon: "📅" },
+  { title: "Anonymous Profiles", text: "Create a separate profile for your adult interests. Keep your main account clean.", icon: "🎭" },
+];
+
+const articles = [
+  { title: "Hidden NSFW Facebook Groups", excerpt: "How to find and join secret adult groups on Facebook. The complete guide.", href: "/social/facebook" },
+  { title: "Facebook Dating Tips", excerpt: "Maximize your matches on Facebook Dating. Profile tips and conversation starters.", href: "/social/facebook" },
+  { title: "How To Stay Anonymous on Facebook", excerpt: "Protect your identity while exploring adult content. Privacy settings and best practices.", href: "/social/facebook" },
+  { title: "Facebook vs Tinder for Hookups", excerpt: "Which app is better for casual encounters? We compare features and success rates.", href: "/social/facebook" },
+];
+---
+
+<Layout title="Facebook Naughty — Secret Adult Groups — NetVices" description="The secret side of Facebook. Hidden groups, dating features, and adult communities you never knew existed. Your guide to Facebook's underground.">
+  <CategoryPage
+    title="Facebook Naughty"
+    subtitle="The Secret Side of Facebook"
+    description="Facebook isn't just for family photos. Discover hidden groups, dating features, and secret communities where adults connect. From discreet hookups to adult discussions — the platform has a whole side most people never see."
+    color="#1877F2"
+    icon="📘"
+    features={features}
+    articles={articles}
+    ctaText="Find Groups"
+    ctaHref="#"
+    heroImage="/images/vice-facebook.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock
+        color="#1877F2"
+        sectionTitle="Best Dating Sites via Facebook"
+        offers={[
+          { name: "Ashley Madison", tagline: "More discreet than Facebook Dating. 70M+ members.", bonus: "FREE JOIN", rating: 5, href: "#", color: "#ff4500", badge: "MORE DISCREET" },
+          { name: "Adult Friend Finder", tagline: "The adult alternative to Facebook dating groups.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#e80082" },
+          { name: "Victoria Milan", tagline: "Secret encounters. Much safer than Facebook groups.", bonus: "FREE SIGN-UP", rating: 4, href: "#", color: "#9b30ff" },
+        ]}
+      />
+    </div>
+  </CategoryPage>
+</Layout>

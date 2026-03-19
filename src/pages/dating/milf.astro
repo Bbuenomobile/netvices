@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Real Cougars", text: "Verified mature women. No fake profiles — just real, confident women ready to connect.", icon: "✅" },
+  { title: "No Games", text: "Straightforward women who know what they want. Skip the mind games and mixed signals.", icon: "🎯" },
+  { title: "Age-Gap Friendly", text: "Platforms that celebrate age differences. Younger men and older women — no judgment.", icon: "💕" },
+  { title: "Experienced Partners", text: "Women with experience and confidence. They know how to have a good time.", icon: "✨" },
+  { title: "Discreet Affairs", text: "Privacy-focused encounters. Your connection stays between you and her.", icon: "🔒" },
+  { title: "Premium Profiles", text: "Curated selection of attractive mature women. Quality over quantity.", icon: "💎" },
+];
+
+const articles = [
+  { title: "Best Cougar Dating Sites 2026: Expert Review", excerpt: "We tested every major cougar dating platform. Here are the ones that actually work.", href: "/dating/milf" },
+  { title: "How To Date Older Women: Complete Guide", excerpt: "Everything you need to know about attracting and dating mature women.", href: "/dating/milf" },
+  { title: "MILF Dating: What You Need To Know", excerpt: "The ins and outs of dating older women. Expectations, etiquette, and success tips.", href: "/dating/milf" },
+  { title: "Age Gap Relationships: Breaking The Stigma", excerpt: "Why age-gap dating is more popular than ever. Society is catching up.", href: "/dating/milf" },
+];
+---
+
+<Layout title="Mature Women Dating — Meet Cougars — NetVices" description="Connect with confident, experienced women who know what they want. MILFs, cougars, and mature companionship. Real connections with real women.">
+  <CategoryPage
+    title="Mature Women"
+    subtitle="Experience Meets Desire"
+    description="Connect with confident, experienced women who know exactly what they want. Whether you're into MILFs, cougars, or simply prefer mature companionship — these platforms deliver real connections with real women. No games, no drama, just straightforward dating with women who have experience and confidence."
+    color="#ff6ec7"
+    icon="💋"
+    features={features}
+    articles={articles}
+    ctaText="Meet Cougars Now"
+    ctaHref="#"
+    heroImage="/images/vice-milf.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ff6ec7" sectionTitle="Best Cougar & MILF Dating Sites" offers={[
+        { name: "CougarLife", tagline: "The #1 cougar dating site. Meet experienced women tonight.", bonus: "3 DAYS FREE", rating: 5, href: "#", color: "#ff6ec7", badge: "#1 COUGAR SITE" },
+        { name: "Ashley Madison", tagline: "Millions of mature women seeking discreet encounters.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#ff4500", badge: "70M+ USERS" },
+        { name: "Adult Friend Finder", tagline: "Filter by age. Find MILFs and cougars in your area.", bonus: "FREE TRIAL", rating: 4, href: "#", color: "#e80082" },
+        { name: "Victoria Milan", tagline: "Discreet encounters with sophisticated mature women.", bonus: "FREE JOIN", rating: 4, href: "#", color: "#9b30ff" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

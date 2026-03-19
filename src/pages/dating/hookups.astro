@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Anonymous Profiles", text: "No real name needed. Create a profile with a username and keep your identity completely private.", icon: "🎭" },
+  { title: "Location Match", text: "GPS-based matching finds compatible partners in your area. The closer, the better.", icon: "📍" },
+  { title: "Instant Chat", text: "Start messaging immediately. No waiting, no games — just direct conversation.", icon: "💬" },
+  { title: "Photo Verify", text: "Verified real photos. Know exactly who you're meeting before you meet.", icon: "✅" },
+  { title: "Same-Day Dates", text: "Meet someone tonight. Platforms built for spontaneous, same-day connections.", icon: "⚡" },
+  { title: "Discreet Billing", text: "Nothing suspicious on your statement. Privacy extends to every transaction.", icon: "🔒" },
+];
+
+const articles = [
+  { title: "Best Hookup Sites 2026: Tested & Ranked", excerpt: "We tested dozens of hookup platforms. Here are the top picks that actually deliver real encounters.", href: "/dating/hookups" },
+  { title: "How To Have A Safe One-Night Stand", excerpt: "Essential safety tips for casual hookups. Stay safe while having fun.", href: "/dating/hookups" },
+  { title: "Hookup Apps That Actually Work", excerpt: "Most apps promise the world. These few actually deliver real, no-strings connections.", href: "/dating/hookups" },
+  { title: "Casual Dating Etiquette Guide", excerpt: "The unwritten rules of hookup culture. Respect, consent, and clear communication.", href: "/dating/hookups" },
+];
+---
+
+<Layout title="Discreet Hookups — No Strings Attached — NetVices" description="Find no-strings-attached hookups near you with complete anonymity and verified profiles. Anonymous encounters, zero commitment, same-day dates.">
+  <CategoryPage
+    title="Discreet Hookups"
+    subtitle="Anonymous Encounters, Zero Commitment"
+    description="Find no-strings-attached hookups near you with complete anonymity and verified profiles. Skip the small talk and connect with like-minded adults who want the same thing — casual, discreet encounters with zero commitment. Our tested platforms deliver real people, real photos, and real meetups."
+    color="#ff4500"
+    icon="🔥"
+    features={features}
+    articles={articles}
+    ctaText="Find Hookups Tonight"
+    ctaHref="#"
+    heroImage="/images/vice-hookups.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ff4500" sectionTitle="Best Hookup Sites — Meet Tonight" offers={[
+        { name: "Ashley Madison", tagline: "The #1 site for discreet hookups. 70 million members worldwide.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#ff4500", badge: "#1 HOOKUP SITE" },
+        { name: "Adult Friend Finder", tagline: "Largest adult community. Find local hookups in minutes.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#e80082", badge: "80M+ USERS" },
+        { name: "Victoria Milan", tagline: "Anonymous hookups for attached people. End-to-end encryption.", bonus: "FREE JOIN", rating: 4, href: "#", color: "#9b30ff", badge: "DISCREET" },
+        { name: "Seeking", tagline: "Meet generous partners for mutually beneficial arrangements.", bonus: "FREE BROWSE", rating: 4, href: "#", color: "#ffd700" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

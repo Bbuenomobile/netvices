@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Hyper-Local", text: "Matches within miles. Find people in your neighborhood, not across the country.", icon: "📍" },
+  { title: "Real Profiles", text: "ID verified. Know you're talking to real people with real photos.", icon: "✅" },
+  { title: "Instant Connect", text: "Message and meet fast. No lengthy questionnaires — just quick connections.", icon: "⚡" },
+  { title: "Date Ideas", text: "Built-in date suggestions. Local spots and activities to break the ice.", icon: "💡" },
+  { title: "Safe Meet", text: "Safety features built in. Meet in public, verify identity, stay in control.", icon: "🛡️" },
+  { title: "All Ages 18+", text: "Every adult welcome. Whether you're 21 or 51, find your match locally.", icon: "🌈" },
+];
+
+const articles = [
+  { title: "Best Local Dating Apps 2026", excerpt: "The top apps for meeting singles in your area. Tested for real local matches.", href: "/dating/local" },
+  { title: "How To Set Up The Perfect First Date", excerpt: "From messaging to meeting. Tips for a smooth first date with a local match.", href: "/dating/local" },
+  { title: "Local Dating Safety Tips", excerpt: "Stay safe when meeting someone new. Essential precautions for local encounters.", href: "/dating/local" },
+  { title: "Meeting Strangers Online: Complete Guide", excerpt: "Everything you need to know about turning online connections into real-life meetings.", href: "/dating/local" },
+];
+---
+
+<Layout title="Local Dates — Meet Singles Near You — NetVices" description="Find singles in your neighborhood for casual dates and intimate encounters. GPS-powered matching, verified profiles, and real connections.">
+  <CategoryPage
+    title="Local Dates"
+    subtitle="Real People, Real Close, Real Fast"
+    description="Find singles in your neighborhood for casual dates and intimate encounters. GPS-powered matching connects you with real people nearby — no more long-distance pen pals. Verified profiles, instant messaging, and built-in date ideas make it easy to meet someone tonight. All ages 18+ welcome."
+    color="#9b30ff"
+    icon="📍"
+    features={features}
+    articles={articles}
+    ctaText="Find Locals"
+    ctaHref="#"
+    heroImage="/images/vice-local.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#9b30ff" sectionTitle="Best Local Dating Apps" offers={[
+        { name: "Ashley Madison", tagline: "Find discreet local encounters. GPS-based matching.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#ff4500", badge: "BEST LOCAL" },
+        { name: "Adult Friend Finder", tagline: "Millions of locals looking for fun. Filter by distance.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#e80082", badge: "MOST USERS" },
+        { name: "Victoria Milan", tagline: "Meet locals discreetly. Anonymous browsing included.", bonus: "FREE JOIN", rating: 4, href: "#", color: "#9b30ff" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

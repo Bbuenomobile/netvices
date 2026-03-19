@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryPage from '../components/CategoryPage.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+---
+
+<Layout title="Live Girls — Free Live Sex Cams — NetVices" description="Watch beautiful girls perform live on cam. Free live sex shows, private sessions, and interactive experiences.">
+  <CategoryPage
+    title="Live Girls"
+    subtitle="Real Girls, Live Shows, Right Now"
+    description="Thousands of stunning models are streaming live right now. Free to watch, interactive, and hotter than you can imagine. Private shows, tip-controlled toys, and intimate one-on-one sessions."
+    color="#ff1493"
+    icon="🎥"
+    heroImage="/images/vice-live-girls.png"
+    features={[
+      { title: "Free Live Shows", text: "Watch hundreds of live cam shows completely free. No registration required to start watching.", icon: "📺" },
+      { title: "Private Sessions", text: "Go one-on-one with your favorite model. Exclusive private shows tailored to your fantasies.", icon: "🔒" },
+      { title: "Interactive Toys", text: "Control the model's toy with your tips. Real-time interaction that makes the experience unforgettable.", icon: "🎮" },
+      { title: "HD Streaming", text: "Crystal clear 1080p and 4K streams. See every detail in stunning high definition.", icon: "📹" },
+      { title: "All Categories", text: "Every type of model you could want. Filter by age, body type, ethnicity, and more.", icon: "🔍" },
+      { title: "Mobile Friendly", text: "Watch live shows on your phone or tablet. Perfect quality on any device, anywhere.", icon: "📱" },
+    ]}
+    ctaText="Watch Live Now"
+    ctaHref="#"
+    articles={[
+      { title: "Best Free Cam Sites in 2026: Complete Ranking", excerpt: "We've spent hundreds of hours testing every major cam site. Here are the absolute best for free content and premium experiences.", href: "#", badge: "🔴 Live" },
+      { title: "How To Get Free Tokens On Cam Sites", excerpt: "Legitimate ways to earn free tokens and credits on major cam platforms. New user bonuses, promotions, and insider tricks.", href: "#", badge: "Tips" },
+      { title: "Cam Girl Guide: Finding Your Perfect Match", excerpt: "How to navigate cam sites like a pro. Search filters, favorite lists, and tips for getting the best private shows.", href: "#", badge: "Guide" },
+      { title: "Interactive Cam Shows: The Future of Adult Entertainment", excerpt: "Tip-controlled toys, VR cams, and interactive experiences that are changing the game. The technology behind modern cam sites.", href: "#", badge: "Tech" },
+    ]}
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ff1493" sectionTitle="Best Live Cam Sites — Watch Free" offers={[
+        { name: "Chaturbate", tagline: "The world's largest free cam site. Thousands of models online now.", bonus: "FREE TOKENS", rating: 5, href: "#", color: "#ff1493", badge: "#1 CAM SITE" },
+        { name: "StripChat", tagline: "VR cams, interactive toys, and the hottest models. Free to watch.", bonus: "50 FREE TOKENS", rating: 5, href: "#", color: "#e80082", badge: "VR READY" },
+        { name: "LiveJasmin", tagline: "Premium HD cam shows. The most beautiful models on the internet.", bonus: "FREE CREDITS", rating: 5, href: "#", color: "#ff4500", badge: "PREMIUM" },
+        { name: "CamSoda", tagline: "Interactive cam shows with tip-controlled toys. Unique experiences.", bonus: "200 FREE TOKENS", rating: 4, href: "#", color: "#ff6ec7" },
+        { name: "BongaCams", tagline: "European cam site with models from 190+ countries. Always live.", bonus: "FREE SHOW", rating: 4, href: "#", color: "#ffd700" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

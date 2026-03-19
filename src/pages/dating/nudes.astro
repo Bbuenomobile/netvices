@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Verified Users", text: "Real people only. Every platform we recommend verifies identity to keep fakes and bots out.", icon: "✅" },
+  { title: "End-to-End Encryption", text: "Photos stay private. Your intimate content is encrypted and never stored on servers.", icon: "🔐" },
+  { title: "Screenshot Protection", text: "Anti-screenshot tech prevents others from saving your photos without permission.", icon: "🛡️" },
+  { title: "Consent-Based", text: "Mutual agreement required. Everyone opts in — no surprises, no pressure.", icon: "🤝" },
+  { title: "Free Messaging", text: "Start chatting without paying. Many platforms offer free messaging to get you started.", icon: "💬" },
+  { title: "Community Guidelines", text: "Safe, respectful environment. Clear rules keep the community fun and drama-free.", icon: "📋" },
+];
+
+const articles = [
+  { title: "Best Nudes Trading Platforms 2026", excerpt: "The top platforms for safe, consensual photo exchange. Tested for privacy and user experience.", href: "/dating/nudes" },
+  { title: "How To Stay Safe Sharing Intimate Photos", excerpt: "Protect your privacy when sharing. Essential tips for safe sexting and photo exchange.", href: "/dating/nudes" },
+  { title: "Nudes Exchange Etiquette", excerpt: "The dos and don'ts of sharing intimate content. Respect, consent, and boundaries.", href: "/dating/nudes" },
+  { title: "Best Apps For Sexting", excerpt: "Apps built for sexting with privacy in mind. Features that matter for adult messaging.", href: "/dating/nudes" },
+];
+---
+
+<Layout title="Nudes Exchange — Share & Receive — NetVices" description="Safe and consensual platforms for exchanging intimate photos with verified users. End-to-end encryption, screenshot protection, and community guidelines.">
+  <CategoryPage
+    title="Nudes Exchange"
+    subtitle="Share, Receive, Enjoy — Safely"
+    description="Discover safe and consensual platforms for exchanging intimate photos with verified users. Share and receive with confidence — end-to-end encryption keeps your content private, screenshot protection prevents leaks, and strict community guidelines ensure a respectful environment. Real people, real consent, real fun."
+    color="#e80082"
+    icon="📸"
+    features={features}
+    articles={articles}
+    ctaText="Start Trading"
+    ctaHref="#"
+    heroImage="/images/vice-nudes.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#e80082" sectionTitle="Best Platforms for Nudes Exchange" offers={[
+        { name: "OnlyFans", tagline: "Subscribe to creators and exchange exclusive content.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "BEST PLATFORM" },
+        { name: "Fansly", tagline: "More privacy features. Share and receive with verified users.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7" },
+        { name: "Adult Friend Finder", tagline: "The largest community for sharing intimate photos.", bonus: "FREE TRIAL", rating: 4, href: "#", color: "#e80082" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>

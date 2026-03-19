@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryPage from '../components/CategoryPage.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+---
+
+<Layout title="Spicy Dating — Meet Real People — NetVices" description="Find discreet hookups, exchange nudes, meet local singles, and connect with mature women. Your guide to adult dating.">
+  <CategoryPage
+    title="Spicy Dating"
+    subtitle="Real People, Real Encounters, No Strings"
+    description="Tired of swiping on boring dating apps? Discover platforms designed for adults who know what they want. Discreet hookups, naughty exchanges, and real encounters — all verified and tested."
+    color="#ff4500"
+    icon="💋"
+    heroImage="/images/vice-dating.png"
+    features={[
+      { title: "Verified Profiles", text: "Every platform we recommend has verified profiles. Real people, real photos, real encounters.", icon: "✅" },
+      { title: "100% Discreet", text: "Your privacy matters. These platforms use encryption and anonymous browsing to keep your identity safe.", icon: "🔒" },
+      { title: "Instant Matches", text: "Get matched with compatible partners in minutes, not days. Fast-track your way to a date.", icon: "⚡" },
+      { title: "Location Based", text: "Find partners near you. Whether you're at home or traveling, there's always someone nearby.", icon: "📍" },
+      { title: "Free Messaging", text: "Many platforms offer free messaging for new users. Start chatting without spending a dime.", icon: "💬" },
+      { title: "All Preferences", text: "Whatever you're into, there's a niche for you. Every orientation, every kink, every desire.", icon: "🌈" },
+    ]}
+    ctaText="Start Dating Now"
+    ctaHref="#categories"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ff4500" sectionTitle="Top Dating Sites — Meet Tonight" offers={[
+        { name: "Ashley Madison", tagline: "The world's #1 discreet dating site. 70M+ members worldwide.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#ff4500", badge: "MOST POPULAR" },
+        { name: "Adult Friend Finder", tagline: "The largest adult dating community. Find hookups, swingers, and more.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#e80082", badge: "80M+ USERS" },
+        { name: "Victoria Milan", tagline: "Discreet encounters for attached people. Anonymous & encrypted.", bonus: "FREE JOIN", rating: 4, href: "#", color: "#9b30ff", badge: "DISCREET" },
+        { name: "CougarLife", tagline: "Meet confident mature women in your area. Age-gap dating done right.", bonus: "3 DAYS FREE", rating: 4, href: "#", color: "#ff6ec7" },
+      ]} />
+    </div>
+  </CategoryPage>
+
+  <section id="categories" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-[Bungee] text-2xl sm:text-4xl text-center mb-12" style="color: #ff4500;">Find Your Match</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <CategoryCard title="Discreet Hookups" description="No-strings-attached encounters. 100% anonymous profiles, location-based matching, and instant connections. Your secret is safe." href="/dating/hookups" icon="🔥" color="#ff4500" badge="🔥 #1" cta="Find Hookups" />
+        <CategoryCard title="Nudes Exchange" description="Share and receive exclusive photos with verified users. Safe, consensual, and exciting. A community built for adults." href="/dating/nudes" icon="📸" color="#e80082" badge="HOT" cta="Start Sharing" />
+        <CategoryCard title="Local Dates" description="Meet real people in your area. Verified profiles, instant messaging, and date suggestions. Find someone tonight." href="/dating/local" icon="📍" color="#9b30ff" cta="Find Local" />
+        <CategoryCard title="Mature Women" description="Connect with experienced, confident women. MILFs and cougars who know exactly what they want. No games, just fun." href="/dating/milf" icon="💋" color="#ff6ec7" badge="POPULAR" cta="Meet Cougars" />
+      </div>
+    </div>
+  </section>
+</Layout>

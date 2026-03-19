@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Secret Groups", text: "Exclusive invite-only groups with premium adult content. The most sought-after communities on Telegram.", icon: "🔐" },
+  { title: "NSFW Bots", text: "AI-powered content bots that deliver personalized adult content 24/7. Just add and enjoy.", icon: "🤖" },
+  { title: "Free Content", text: "Everything is free. No subscription fees, no paywalls. Join and access unlimited content.", icon: "🆓" },
+  { title: "Auto-Updates", text: "Content posted hourly. New material drops constantly so you never run out of fresh stuff.", icon: "🔄" },
+  { title: "Anonymous", text: "No real identity needed. Use a username and stay completely private. Your secrets stay yours.", icon: "🎭" },
+  { title: "Global Community", text: "Millions of users worldwide. Connect with like-minded people from every corner of the globe.", icon: "🌍" },
+];
+
+const articles = [
+  { title: "Top 50 NSFW Telegram Groups", excerpt: "The definitive list of the best adult Telegram groups. Curated, verified, and updated for 2026.", href: "/social/telegram" },
+  { title: "How To Find Hidden Telegram Channels", excerpt: "Step-by-step guide to discovering secret channels that don't appear in search.", href: "/social/telegram" },
+  { title: "Telegram Bots For Adult Content", excerpt: "The best NSFW bots to add to your Telegram. AI-powered and always available.", href: "/social/telegram" },
+  { title: "Telegram vs OnlyFans", excerpt: "Which platform wins for adult content? We compare features, pricing, and content quality.", href: "/social/telegram" },
+];
+---
+
+<Layout title="Telegram Sex — Best NSFW Telegram Groups — NetVices" description="The ultimate platform for uncensored adult content. Discover secret groups, channels, and bots. Everything free, anonymous, and updated hourly.">
+  <CategoryPage
+    title="Telegram Sex"
+    subtitle="The Underground NSFW Network"
+    description="Telegram is the ultimate platform for uncensored adult content. Secret groups, private channels, and AI-powered bots deliver everything you need. No subscriptions, no censorship — just pure, anonymous access to the best NSFW content on the internet."
+    color="#0088cc"
+    icon="✈️"
+    features={features}
+    articles={articles}
+    ctaText="Join Top Groups"
+    ctaHref="#"
+    heroImage="/images/vice-telegram.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock
+        color="#0088cc"
+        sectionTitle="Best Telegram NSFW Platforms"
+        offers={[
+          { name: "OnlyFans", tagline: "Follow your favorite Telegram creators on OnlyFans for exclusive content.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "#1 PICK" },
+          { name: "Fansly", tagline: "Alternative to OnlyFans with better Telegram integration.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7" },
+          { name: "ManyVids", tagline: "Buy clips and custom content from top Telegram creators.", bonus: "FREE CREDITS", rating: 4, href: "#", color: "#e80082" },
+        ]}
+      />
+    </div>
+  </CategoryPage>
+</Layout>

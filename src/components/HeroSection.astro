@@ -1,0 +1,91 @@
+---
+
+---
+
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0">
+    <!-- Hero background image -->
+    <img src="/images/hero-bg.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-gradient-to-b from-vice-darker/30 via-vice-darker/30 to-vice-darker/80"></div>
+
+    <!-- Grid lines -->
+    <div class="absolute inset-0 opacity-10"
+      style="background-image: linear-gradient(rgba(255,110,199,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,110,199,0.3) 1px, transparent 1px); background-size: 50px 50px;">
+    </div>
+
+    <!-- Floating orbs -->
+    <div class="absolute top-20 left-10 w-64 h-64 bg-vice-purple/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-vice-pink/10 rounded-full blur-3xl animate-float" style="animation-delay: 1.5s;"></div>
+    <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-vice-cyan/5 rounded-full blur-3xl animate-float" style="animation-delay: 3s;"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-vice-pink/30 bg-vice-pink/10 backdrop-blur-sm mb-8 animate-pulse-neon">
+      <span class="w-2 h-2 rounded-full bg-vice-pink animate-ping"></span>
+      <span class="font-[Orbitron] text-xs uppercase tracking-widest text-vice-pink">The Internet's Darkest Pleasures</span>
+    </div>
+
+    <!-- Main title -->
+    <h1 class="font-[Bungee] text-5xl sm:text-7xl lg:text-8xl xl:text-9xl leading-tight mb-6">
+      <span class="block bg-gradient-to-r from-vice-pink via-vice-hot-pink to-vice-magenta bg-clip-text text-transparent">
+        NET
+      </span>
+      <span class="block bg-gradient-to-r from-vice-cyan via-vice-neon-blue to-vice-purple bg-clip-text text-transparent -mt-2 sm:-mt-4">
+        VICES
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="font-[Rajdhani] text-xl sm:text-2xl lg:text-3xl text-gray-300 max-w-3xl mx-auto mb-4 font-light">
+      Every vice the internet has to offer.
+      <span class="text-vice-pink font-semibold">One destination.</span>
+    </p>
+    <p class="font-[Rajdhani] text-base sm:text-lg text-gray-500 max-w-2xl mx-auto mb-10">
+      From live cam girls to AI girlfriends, from hot social media to cash games — discover every sinful corner of the web.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#vice-circle" class="group relative inline-flex items-center gap-2 px-8 py-4 rounded-xl font-[Orbitron] text-sm uppercase tracking-wider font-bold text-white overflow-hidden transition-all duration-300 hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-r from-vice-magenta via-vice-pink to-vice-hot-pink"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-vice-pink via-vice-magenta to-vice-purple opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <span class="relative">Explore Vices</span>
+        <svg class="relative w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+
+      <a href="/live-girls" class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl font-[Orbitron] text-sm uppercase tracking-wider font-bold border border-vice-cyan/50 text-vice-cyan hover:bg-vice-cyan/10 transition-all duration-300 hover:scale-105 hover:border-vice-cyan neon-border-cyan">
+        <span>Live Now</span>
+        <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+      <div class="text-center">
+        <div class="font-[Bungee] text-2xl sm:text-3xl text-vice-pink">500+</div>
+        <div class="font-[Rajdhani] text-xs sm:text-sm text-gray-500 uppercase tracking-wider">Sites Reviewed</div>
+      </div>
+      <div class="text-center">
+        <div class="font-[Bungee] text-2xl sm:text-3xl text-vice-cyan">24/7</div>
+        <div class="font-[Rajdhani] text-xs sm:text-sm text-gray-500 uppercase tracking-wider">Live Content</div>
+      </div>
+      <div class="text-center">
+        <div class="font-[Bungee] text-2xl sm:text-3xl text-vice-yellow">100%</div>
+        <div class="font-[Rajdhani] text-xs sm:text-sm text-gray-500 uppercase tracking-wider">Free Access</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+    <span class="font-[Orbitron] text-xs text-gray-500 uppercase tracking-widest">Scroll Down</span>
+    <svg class="w-5 h-5 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Viral NSFW", text: "Adult content that goes viral. Creators who know how to push TikTok's limits.", icon: "🔥" },
+  { title: "Adult Creators", text: "The hottest TikTok creators with premium content. Follow the best in the game.", icon: "⭐" },
+  { title: "Live Streams", text: "Live adult streams and Q&A sessions. Interact with creators in real time.", icon: "📺" },
+  { title: "Trending Content", text: "Stay on top of the latest adult trends. Know what's hot before everyone else.", icon: "📈" },
+  { title: "Algorithm Hacks", text: "How the For You page works for adult content. Tips to see more of what you want.", icon: "🔧" },
+  { title: "Alt Platforms", text: "TikTok alternatives built for adult content. No censorship, no restrictions.", icon: "🔄" },
+];
+
+const articles = [
+  { title: "Best Adult TikTok Accounts", excerpt: "The top adult TikTok creators to follow. Curated list updated for 2026.", href: "/social/tiktok" },
+  { title: "TikTok Alternatives For NSFW Content", excerpt: "Platforms where adult creators post without restrictions. Full uncensored content.", href: "/social/tiktok" },
+  { title: "How Creators Bypass TikTok Rules", excerpt: "The tricks creators use to post adult content on TikTok. What works and what doesn't.", href: "/social/tiktok" },
+  { title: "From TikTok To OnlyFans Pipeline", excerpt: "How TikTok creators monetize with OnlyFans. The business model explained.", href: "/social/tiktok" },
+];
+---
+
+<Layout title="TikTok Porn — Adult TikTok Content — NetVices" description="The uncensored side of TikTok. Adult creators, NSFW content, and viral videos that push boundaries. Plus alternatives for full adult content.">
+  <CategoryPage
+    title="TikTok Porn"
+    subtitle="The Uncensored Side of TikTok"
+    description="TikTok has an adult side most people never discover. From suggestive creators to NSFW content that pushes boundaries — and the alternative platforms where creators go when TikTok's rules get too strict. Your guide to adult short-form video."
+    color="#ff0050"
+    icon="🎵"
+    features={features}
+    articles={articles}
+    ctaText="Watch Now"
+    ctaHref="#"
+    heroImage="/images/vice-tiktok.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock
+        color="#ff0050"
+        sectionTitle="Where TikTok Creators Go Uncensored"
+        offers={[
+          { name: "OnlyFans", tagline: "Where TikTok creators post what they can't on TikTok.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "#1 FOR TIKTOK" },
+          { name: "Fansly", tagline: "The new home for banned TikTok creators. Uncensored content.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7", badge: "TRENDING" },
+          { name: "MYM Fans", tagline: "European TikTokers going wild. Exclusive behind-the-scenes.", bonus: "€10 FREE", rating: 4, href: "#", color: "#e80082" },
+        ]}
+      />
+    </div>
+  </CategoryPage>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryPage from '../components/CategoryPage.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+---
+
+<Layout title="Hot Social Media — NetVices" description="Discover the hottest adult content on Telegram, Snapchat, Facebook, and TikTok. Your guide to NSFW social media.">
+  <CategoryPage
+    title="Hot Social"
+    subtitle="The Hottest Social Networks Uncensored"
+    description="Social media isn't just for cat videos. Discover the wild, uncensored side of your favorite platforms. From secret Telegram groups to premium Snapchat accounts."
+    color="#ff6ec7"
+    icon="🔥"
+    heroImage="/images/vice-hot-social.png"
+    features={[
+      { title: "Secret Groups", text: "Access exclusive Telegram groups and channels with premium adult content updated daily.", icon: "🔐" },
+      { title: "Premium Snaps", text: "Find the hottest Snapchat creators offering exclusive content you won't find anywhere else.", icon: "👻" },
+      { title: "Viral Content", text: "Stay updated with trending adult content across all major social platforms.", icon: "📈" },
+      { title: "Free Access", text: "Most of our recommended content is completely free. No credit card needed.", icon: "🆓" },
+      { title: "Daily Updates", text: "New accounts and groups added every single day. Never run out of fresh content.", icon: "🔄" },
+      { title: "Verified Creators", text: "We only recommend verified, active creators with quality content.", icon: "✅" },
+    ]}
+    ctaText="Browse All Social"
+    ctaHref="#categories"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ff6ec7" sectionTitle="Best Adult Social Platforms" offers={[
+        { name: "OnlyFans", tagline: "The #1 platform for adult content creators. Subscribe to your favorites.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "EDITOR'S CHOICE" },
+        { name: "Fansly", tagline: "Premium alternative to OnlyFans. Better creator tools, more content.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7", badge: "TRENDING" },
+        { name: "Telegram Premium Groups", tagline: "Access thousands of exclusive NSFW groups and channels instantly.", bonus: "FREE ACCESS", rating: 4, href: "#", color: "#0088cc" },
+        { name: "MYM Fans", tagline: "European creator platform with exclusive content from French creators.", bonus: "€10 FREE", rating: 4, href: "#", color: "#e80082" },
+      ]} />
+    </div>
+  </CategoryPage>
+
+  <section id="categories" class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-[Bungee] text-2xl sm:text-4xl text-center text-vice-pink mb-12">Choose Your Platform</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <CategoryCard title="Telegram Sex" description="Join the hottest Telegram groups and channels. Thousands of free NSFW content, updated every hour. The largest collection of adult Telegram links." href="/social/telegram" icon="✈️" color="#0088cc" badge="🔥 TOP" cta="Join Groups" />
+        <CategoryCard title="Snapchat Hot" description="Discover premium Snapchat accounts. Exclusive stories, live shows, and private content from the hottest creators." href="/social/snapchat" icon="👻" color="#FFFC00" badge="PREMIUM" cta="Add Friends" />
+        <CategoryCard title="Facebook Naughty" description="The secret side of Facebook. Hidden groups, dating features, and adult content you never knew existed." href="/social/facebook" icon="📘" color="#1877F2" cta="Explore" />
+        <CategoryCard title="TikTok Porn" description="The uncensored version of TikTok. Adult creators, explicit content, and viral NSFW videos." href="/social/tiktok" icon="🎵" color="#ff0050" badge="VIRAL" cta="Watch Now" />
+      </div>
+    </div>
+  </section>
+</Layout>

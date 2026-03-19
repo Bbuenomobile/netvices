@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPage from '../../components/CategoryPage.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+
+const features = [
+  { title: "Premium Stories", text: "Exclusive stories from top creators. Content you won't find on their public accounts.", icon: "📖" },
+  { title: "Live Snaps", text: "Real-time snaps sent directly to your inbox. Get personal content as it happens.", icon: "⚡" },
+  { title: "Direct Messages", text: "One-on-one messaging with creators. Request custom content and chat privately.", icon: "💬" },
+  { title: "Exclusive Content", text: "Behind-the-scenes material and content made just for premium subscribers.", icon: "🔒" },
+  { title: "Daily Updates", text: "New content every single day. Creators post regularly so there's always something fresh.", icon: "📅" },
+  { title: "Creator Verified", text: "All creators are verified and active. No fake accounts, no scams — just real people.", icon: "✅" },
+];
+
+const articles = [
+  { title: "Best Premium Snapchat Accounts 2026", excerpt: "Our curated list of the top premium Snapchat creators. Quality content, fair prices.", href: "/social/snapchat" },
+  { title: "How To Find Hot Snapchat Users", excerpt: "Tips and tricks for discovering premium Snapchat accounts. Where to look and what to avoid.", href: "/social/snapchat" },
+  { title: "Snapchat Premium vs OnlyFans", excerpt: "Which platform offers better value for adult content? We break down the pros and cons.", href: "/social/snapchat" },
+  { title: "Free Premium Snap Trials", excerpt: "How to get free trials from premium Snapchat creators. Start without spending a dime.", href: "/social/snapchat" },
+];
+---
+
+<Layout title="Snapchat Hot — Premium Snap Accounts — NetVices" description="Discover the hottest premium Snapchat creators. Exclusive stories, live snaps, and daily content that disappears. Your guide to premium Snap.">
+  <CategoryPage
+    title="Snapchat Hot"
+    subtitle="Premium Content That Disappears"
+    description="Discover the hottest premium Snapchat creators. Exclusive stories, live snaps, and private content that disappears after you view it. Real creators, real content, and an experience you won't find anywhere else."
+    color="#FFFC00"
+    icon="👻"
+    features={features}
+    articles={articles}
+    ctaText="Add Hot Friends"
+    ctaHref="#"
+    heroImage="/images/vice-snapchat.png"
+  >
+    <div slot="affiliates">
+      <AffiliateBlock
+        color="#FFFC00"
+        sectionTitle="Best Premium Snapchat Platforms"
+        offers={[
+          { name: "Fancentro", tagline: "The #1 platform for premium Snapchat accounts. Instant access.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#FFFC00", badge: "BEST FOR SNAP" },
+          { name: "OnlyFans", tagline: "Most Snapchat creators also have OnlyFans. Get full access.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0" },
+          { name: "Fansly", tagline: "Discover premium Snap creators with exclusive disappearing content.", bonus: "20% OFF", rating: 4, href: "#", color: "#ff6ec7" },
+        ]}
+      />
+    </div>
+  </CategoryPage>
+</Layout>

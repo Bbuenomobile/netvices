@@ -1,0 +1,92 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon?: string;
+  image?: string;
+  color?: string;
+  badge?: string;
+  cta?: string;
+}
+
+const {
+  title,
+  description,
+  href,
+  icon,
+  image,
+  color = "#ff6ec7",
+  badge,
+  cta = "Discover More"
+} = Astro.props;
+---
+
+<a
+  href={href}
+  class="group block relative overflow-hidden rounded-2xl border transition-all duration-500 hover:scale-[1.03]"
+  style={`border-color: ${color}25; --card-color: ${color};`}
+>
+  {/* Background image or gradient */}
+  {image ? (
+    <div class="absolute inset-0">
+      <img src={image} alt="" class="w-full h-full object-cover opacity-60 group-hover:opacity-75 group-hover:scale-110 transition-all duration-700" />
+      <div class="absolute inset-0 bg-gradient-to-t from-vice-darker via-vice-darker/40 to-transparent/10"></div>
+    </div>
+  ) : (
+    <div
+      class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500"
+      style={`background: radial-gradient(circle at 30% 30%, ${color}, transparent 60%);`}
+    ></div>
+  )}
+
+  <div class="relative p-6 sm:p-8 min-h-[220px] flex flex-col justify-end" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
+    {/* Badge */}
+    {badge && (
+      <div class="absolute top-4 right-4">
+        <span
+          class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-[Orbitron] font-bold uppercase"
+          style={`background: ${color}20; color: ${color}; border: 1px solid ${color}40;`}
+        >
+          {badge}
+        </span>
+      </div>
+    )}
+
+    {/* Icon */}
+    {icon && (
+      <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
+    )}
+
+    {/* Title */}
+    <h3
+      class="font-[Bungee] text-xl sm:text-2xl mb-2 transition-all duration-300 group-hover:tracking-wider"
+      style={`color: ${color};`}
+    >
+      {title}
+    </h3>
+
+    {/* Description */}
+    <p class="font-[Rajdhani] text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors mb-4 line-clamp-3">
+      {description}
+    </p>
+
+    {/* CTA */}
+    <div class="flex items-center gap-2 font-[Orbitron] text-xs uppercase tracking-wider transition-all duration-300 group-hover:gap-4" style={`color: ${color};`}>
+      <span>{cta}</span>
+      <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </div>
+  </div>
+</a>
+
+<style>
+  a:hover {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--card-color) 30%, transparent),
+                0 0 40px color-mix(in srgb, var(--card-color) 15%, transparent);
+    border-color: var(--card-color) !important;
+  }
+</style>

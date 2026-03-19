@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryPage from '../components/CategoryPage.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+---
+
+<Layout title="Cash Games — Win Money Online — NetVices" description="Your ultimate guide to online casinos, betting, poker, and making money online. Top rated platforms with the best bonuses.">
+  <CategoryPage
+    title="Cash & Games"
+    subtitle="Turn Your Luck Into Cold Hard Cash"
+    description="From online casinos to sports betting, crypto trading to poker tournaments — discover the most profitable ways to make money online. Exclusive bonuses and insider tips."
+    color="#ffd700"
+    icon="💰"
+    heroImage="/images/vice-cash-games.png"
+    features={[
+      { title: "Casino Bonuses", text: "Get up to $5,000 in welcome bonuses at top-rated online casinos. Exclusive deals only through NetVices.", icon: "🎰" },
+      { title: "Sports Betting", text: "Bet on your favorite sports with the best odds. Live betting, accumulators, and expert predictions.", icon: "⚽" },
+      { title: "Crypto Casinos", text: "Play with Bitcoin, Ethereum, and more. Anonymous gambling with instant withdrawals.", icon: "₿" },
+      { title: "Poker Rooms", text: "Join the best online poker rooms. Tournaments, cash games, and freerolls with huge prize pools.", icon: "🃏" },
+      { title: "Money Making", text: "Legitimate ways to earn money online. Side hustles, passive income, and money-making strategies.", icon: "💵" },
+      { title: "VIP Programs", text: "Exclusive VIP rewards, cashback offers, and loyalty programs at premium casinos.", icon: "👑" },
+    ]}
+    ctaText="Start Winning Now"
+    ctaHref="#"
+    articles={[
+      { title: "Top 10 Online Casinos With Biggest Bonuses in 2026", excerpt: "We've tested over 200 online casinos to bring you the absolute best. Massive welcome bonuses, fast payouts, and fair games guaranteed.", href: "#", badge: "Editor's Pick" },
+      { title: "How To Win At Online Slots: Expert Strategy Guide", excerpt: "Learn the secrets professional gamblers use to maximize their winnings. RTP, volatility, and bankroll management explained.", href: "#", badge: "Strategy" },
+      { title: "Best Crypto Casinos: Anonymous Gambling Guide", excerpt: "Play with Bitcoin and withdraw within minutes. No ID verification required at these top-rated crypto casinos.", href: "#", badge: "Crypto" },
+      { title: "Sports Betting 101: From Beginner To Pro", excerpt: "Master the art of sports betting. Value bets, accumulators, live betting strategies, and bankroll management.", href: "#", badge: "Guide" },
+    ]}
+  >
+    <div slot="affiliates">
+      <AffiliateBlock color="#ffd700" sectionTitle="Top Online Casinos — Exclusive Bonuses" offers={[
+        { name: "Stake Casino", tagline: "Crypto casino with the best odds. Instant withdrawals, no KYC.", bonus: "$1,000 BONUS", rating: 5, href: "#", color: "#ffd700", badge: "#1 CASINO" },
+        { name: "BC.Game", tagline: "Play with Bitcoin. 5000+ games, live dealers, sports betting.", bonus: "300% MATCH", rating: 5, href: "#", color: "#00d4aa", badge: "CRYPTO" },
+        { name: "1xBet", tagline: "The largest sportsbook. Best odds on football, UFC, esports.", bonus: "$500 FREE BET", rating: 4, href: "#", color: "#ff6600" },
+        { name: "Roobet", tagline: "Crash games, slots, and live casino. Used by top streamers.", bonus: "FREE SPINS", rating: 4, href: "#", color: "#ffd700", badge: "POPULAR" },
+        { name: "Mega Dice", tagline: "New crypto casino with massive jackpots and tournament prizes.", bonus: "$2,500 BONUS", rating: 4, href: "#", color: "#9b30ff" },
+      ]} />
+    </div>
+  </CategoryPage>
+</Layout>
