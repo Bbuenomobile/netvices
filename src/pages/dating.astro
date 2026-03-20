@@ -1,48 +1,134 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CategoryPage from '../components/CategoryPage.astro';
-import CategoryCard from '../components/CategoryCard.astro';
-import AffiliateBlock from '../components/AffiliateBlock.astro';
 ---
 
 <Layout title="Spicy Dating — Meet Real People — NetVices" description="Find discreet hookups, exchange nudes, meet local singles, and connect with mature women. Your guide to adult dating.">
-  <CategoryPage
-    title="Spicy Dating"
-    subtitle="Real People, Real Encounters, No Strings"
-    description="Tired of swiping on boring dating apps? Discover platforms designed for adults who know what they want. Discreet hookups, naughty exchanges, and real encounters — all verified and tested."
-    color="#ff4500"
-    icon="💋"
-    heroImage="/images/vice-dating.png"
-    features={[
-      { title: "Verified Profiles", text: "Every platform we recommend has verified profiles. Real people, real photos, real encounters.", icon: "✅" },
-      { title: "100% Discreet", text: "Your privacy matters. These platforms use encryption and anonymous browsing to keep your identity safe.", icon: "🔒" },
-      { title: "Instant Matches", text: "Get matched with compatible partners in minutes, not days. Fast-track your way to a date.", icon: "⚡" },
-      { title: "Location Based", text: "Find partners near you. Whether you're at home or traveling, there's always someone nearby.", icon: "📍" },
-      { title: "Free Messaging", text: "Many platforms offer free messaging for new users. Start chatting without spending a dime.", icon: "💬" },
-      { title: "All Preferences", text: "Whatever you're into, there's a niche for you. Every orientation, every kink, every desire.", icon: "🌈" },
-    ]}
-    ctaText="Start Dating Now"
-    ctaHref="#categories"
-  >
-    <div slot="affiliates">
-      <AffiliateBlock color="#ff4500" sectionTitle="Top Dating Sites — Meet Tonight" offers={[
-        { name: "Ashley Madison", tagline: "The world's #1 discreet dating site. 70M+ members worldwide.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#ff4500", badge: "MOST POPULAR" },
-        { name: "Adult Friend Finder", tagline: "The largest adult dating community. Find hookups, swingers, and more.", bonus: "FREE TRIAL", rating: 5, href: "#", color: "#e80082", badge: "80M+ USERS" },
-        { name: "Victoria Milan", tagline: "Discreet encounters for attached people. Anonymous & encrypted.", bonus: "FREE JOIN", rating: 4, href: "#", color: "#9b30ff", badge: "DISCREET" },
-        { name: "CougarLife", tagline: "Meet confident mature women in your area. Age-gap dating done right.", bonus: "3 DAYS FREE", rating: 4, href: "#", color: "#ff6ec7" },
-      ]} />
-    </div>
-  </CategoryPage>
 
-  <section id="categories" class="py-16 sm:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="font-[Bungee] text-2xl sm:text-4xl text-center mb-12" style="color: #ff4500;">Find Your Match</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <CategoryCard title="Discreet Hookups" description="No-strings-attached encounters. 100% anonymous profiles, location-based matching, and instant connections. Your secret is safe." href="/dating/hookups" icon="🔥" color="#ff4500" badge="🔥 #1" cta="Find Hookups" />
-        <CategoryCard title="Nudes Exchange" description="Share and receive exclusive photos with verified users. Safe, consensual, and exciting. A community built for adults." href="/dating/nudes" icon="📸" color="#e80082" badge="HOT" cta="Start Sharing" />
-        <CategoryCard title="Local Dates" description="Meet real people in your area. Verified profiles, instant messaging, and date suggestions. Find someone tonight." href="/dating/local" icon="📍" color="#9b30ff" cta="Find Local" />
-        <CategoryCard title="Mature Women" description="Connect with experienced, confident women. MILFs and cougars who know exactly what they want. No games, just fun." href="/dating/milf" icon="💋" color="#ff6ec7" badge="POPULAR" cta="Meet Cougars" />
+  <!-- Banner -->
+  <div class="bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 py-2.5 sm:py-3 text-center">
+    <span class="font-[Orbitron] text-xs sm:text-base uppercase tracking-widest text-white font-bold">
+      💋 Discreet Hookups 💋
+    </span>
+  </div>
+
+  <!-- Cards Stack -->
+  <div class="max-w-2xl mx-auto px-6 sm:px-4 pt-2.5 pb-10 space-y-2.5 sm:space-y-4">
+
+    <!-- Plan Cul Discret -->
+    <a href="/dating/hookups" class="vice-block group block relative overflow-hidden rounded-xl sm:rounded-2xl" style="--block-color: #ff4500;">
+      <div class="relative">
+        <img src="/images/sub-hookups.png" alt="Discreet Hookups" class="w-full vice-card-img object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-1.5 left-2 sm:top-3 sm:left-3">
+          <span class="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-[Orbitron] font-bold uppercase bg-[#ff4500] text-white">🔥 #1</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-2.5 sm:p-6 flex items-end justify-between gap-2">
+          <div>
+            <h2 class="font-[Bungee] text-base sm:text-3xl text-white leading-none" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+              DISCREET HOOKUPS
+            </h2>
+            <p class="font-[Rajdhani] text-[10px] sm:text-sm text-gray-300 mt-0.5">No strings. Near you. Tonight.</p>
+          </div>
+          <div class="shrink-0 text-2xl sm:text-5xl animate-[bounce_1s_ease-in-out_infinite]">👉</div>
+        </div>
       </div>
+    </a>
+
+    <!-- Echanges de Nudes -->
+    <a href="/dating/nudes" class="vice-block group block relative overflow-hidden rounded-xl sm:rounded-2xl" style="--block-color: #e80082;">
+      <div class="relative">
+        <img src="/images/sub-nudes.png" alt="Exchange Nudes" class="w-full vice-card-img object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-1.5 left-2 sm:top-3 sm:left-3">
+          <span class="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-[Orbitron] font-bold uppercase bg-[#e80082] text-white">📸 Hot</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-2.5 sm:p-6 flex items-end justify-between gap-2">
+          <div>
+            <h2 class="font-[Bungee] text-base sm:text-3xl text-white leading-none" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+              NUDES EXCHANGE
+            </h2>
+            <p class="font-[Rajdhani] text-[10px] sm:text-sm text-gray-300 mt-0.5">Share & receive. Safe & consensual.</p>
+          </div>
+          <div class="shrink-0 text-2xl sm:text-5xl animate-[bounce_1s_ease-in-out_infinite]">👉</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Rencontres Locales -->
+    <a href="/dating/local" class="vice-block group block relative overflow-hidden rounded-xl sm:rounded-2xl" style="--block-color: #9b30ff;">
+      <div class="relative">
+        <img src="/images/sub-local.png" alt="Meet Locals" class="w-full vice-card-img object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-1.5 left-2 sm:top-3 sm:left-3">
+          <span class="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-[Orbitron] font-bold uppercase bg-[#9b30ff] text-white">📍 Near You</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-2.5 sm:p-6 flex items-end justify-between gap-2">
+          <div>
+            <h2 class="font-[Bungee] text-base sm:text-3xl text-white leading-none" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+              MEET LOCALS
+            </h2>
+            <p class="font-[Rajdhani] text-[10px] sm:text-sm text-gray-300 mt-0.5">Real people in your area. Tonight.</p>
+          </div>
+          <div class="shrink-0 text-2xl sm:text-5xl animate-[bounce_1s_ease-in-out_infinite]">👉</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Femmes Matures -->
+    <a href="/dating/milf" class="vice-block group block relative overflow-hidden rounded-xl sm:rounded-2xl" style="--block-color: #ff6ec7;">
+      <div class="relative">
+        <img src="/images/sub-mature.png" alt="Mature Women" class="w-full vice-card-img object-cover" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+        <div class="absolute top-1.5 left-2 sm:top-3 sm:left-3">
+          <span class="px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[8px] sm:text-[10px] font-[Orbitron] font-bold uppercase bg-[#ff6ec7] text-white">💋 Popular</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-2.5 sm:p-6 flex items-end justify-between gap-2">
+          <div>
+            <h2 class="font-[Bungee] text-base sm:text-3xl text-white leading-none" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+              MATURE WOMEN
+            </h2>
+            <p class="font-[Rajdhani] text-[10px] sm:text-sm text-gray-300 mt-0.5">Experienced. Confident. No games.</p>
+          </div>
+          <div class="shrink-0 text-2xl sm:text-5xl animate-[bounce_1s_ease-in-out_infinite]">👉</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Back to home -->
+    <div class="pt-4 text-center">
+      <a href="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500/20 border border-orange-500/40 hover:bg-orange-500/30 transition-all font-[Orbitron] text-xs uppercase tracking-wider text-orange-400">
+        ← Back to all vices
+      </a>
     </div>
-  </section>
+
+  </div>
+
+  <style>
+    .vice-card-img {
+      aspect-ratio: 5/2;
+      object-position: top center;
+    }
+    @media (min-width: 640px) {
+      .vice-card-img {
+        aspect-ratio: 16/9;
+        object-position: center;
+      }
+    }
+    .vice-block {
+      border: 2px solid color-mix(in srgb, var(--block-color) 30%, transparent);
+      transition: all 0.3s ease;
+    }
+    .vice-block:hover {
+      border-color: var(--block-color);
+      box-shadow: 0 0 25px color-mix(in srgb, var(--block-color) 40%, transparent);
+      transform: scale(1.02);
+    }
+    .vice-block img {
+      transition: transform 0.5s ease;
+    }
+    .vice-block:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+
 </Layout>
