@@ -1,48 +1,133 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CategoryPage from '../../components/CategoryPage.astro';
-import AffiliateBlock from '../../components/AffiliateBlock.astro';
-
-const features = [
-  { title: "Secret Groups", text: "Exclusive invite-only groups with premium adult content. The most sought-after communities on Telegram.", icon: "🔐" },
-  { title: "NSFW Bots", text: "AI-powered content bots that deliver personalized adult content 24/7. Just add and enjoy.", icon: "🤖" },
-  { title: "Free Content", text: "Everything is free. No subscription fees, no paywalls. Join and access unlimited content.", icon: "🆓" },
-  { title: "Auto-Updates", text: "Content posted hourly. New material drops constantly so you never run out of fresh stuff.", icon: "🔄" },
-  { title: "Anonymous", text: "No real identity needed. Use a username and stay completely private. Your secrets stay yours.", icon: "🎭" },
-  { title: "Global Community", text: "Millions of users worldwide. Connect with like-minded people from every corner of the globe.", icon: "🌍" },
-];
-
-const articles = [
-  { title: "Top 50 NSFW Telegram Groups", excerpt: "The definitive list of the best adult Telegram groups. Curated, verified, and updated for 2026.", href: "/social/telegram" },
-  { title: "How To Find Hidden Telegram Channels", excerpt: "Step-by-step guide to discovering secret channels that don't appear in search.", href: "/social/telegram" },
-  { title: "Telegram Bots For Adult Content", excerpt: "The best NSFW bots to add to your Telegram. AI-powered and always available.", href: "/social/telegram" },
-  { title: "Telegram vs OnlyFans", excerpt: "Which platform wins for adult content? We compare features, pricing, and content quality.", href: "/social/telegram" },
-];
 ---
 
-<Layout title="Telegram Sex — Best NSFW Telegram Groups — NetVices" description="The ultimate platform for uncensored adult content. Discover secret groups, channels, and bots. Everything free, anonymous, and updated hourly.">
-  <CategoryPage
-    title="Telegram Sex"
-    subtitle="The Underground NSFW Network"
-    description="Telegram is the ultimate platform for uncensored adult content. Secret groups, private channels, and AI-powered bots deliver everything you need. No subscriptions, no censorship — just pure, anonymous access to the best NSFW content on the internet."
-    color="#0088cc"
-    icon="✈️"
-    features={features}
-    articles={articles}
-    ctaText="Join Top Groups"
-    ctaHref="#"
-    heroImage="/images/vice-telegram.png"
-  >
-    <div slot="affiliates">
-      <AffiliateBlock
-        color="#0088cc"
-        sectionTitle="Best Telegram NSFW Platforms"
-        offers={[
-          { name: "OnlyFans", tagline: "Follow your favorite Telegram creators on OnlyFans for exclusive content.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "#1 PICK" },
-          { name: "Fansly", tagline: "Alternative to OnlyFans with better Telegram integration.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7" },
-          { name: "ManyVids", tagline: "Buy clips and custom content from top Telegram creators.", bonus: "FREE CREDITS", rating: 4, href: "#", color: "#e80082" },
-        ]}
-      />
+<Layout title="Telegram Sex — Best NSFW Telegram Groups & Channels — NetVices" description="Join the hottest Telegram NSFW groups in one click. Watch Telegram girls live on Telecam. Free, anonymous, uncensored.">
+
+  <div class="tg-page">
+
+    <!-- BLOC 1: Join Telegram Channels — full width, ~half viewport -->
+    <a href="https://t.me/addlist/RB1dx5UbUPsxOTcx" target="_blank" rel="noopener" class="tg-hero group block relative overflow-hidden">
+      <img src="/images/tg-channels.png" alt="Join Telegram NSFW Channels" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+
+      <div class="relative h-full flex flex-col justify-end p-5 sm:p-10">
+        <span class="self-start px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-[Orbitron] font-bold uppercase bg-[#0088cc] text-white mb-2 sm:mb-3 animate-pulse">🔥 7 Channels — 1 Click</span>
+
+        <h1 class="font-[Bungee] text-2xl sm:text-5xl text-white leading-[0.95]" style="text-shadow: 0 2px 15px rgba(0,0,0,0.9);">
+          JOIN ALL HOT<br/>TELEGRAM CHANNELS
+        </h1>
+        <p class="font-[Rajdhani] text-sm sm:text-lg text-gray-200 mt-1 sm:mt-2 max-w-md">Nudes, amateur, sex — all the hottest channels added to your Telegram instantly.</p>
+
+        <div class="mt-3 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-3">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-[#0088cc] text-white font-[Orbitron] text-xs sm:text-sm uppercase tracking-wider font-bold group-hover:bg-[#00aaee] transition-all shadow-xl shadow-[#0088cc]/40 group-hover:shadow-[#0088cc]/60">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.504-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Join on Telegram
+          </span>
+          <span class="px-3 py-1.5 rounded-full text-[9px] sm:text-xs font-[Rajdhani] font-semibold bg-white/10 text-white/80 backdrop-blur-sm border border-white/10">🔐 Anonymous</span>
+          <span class="px-3 py-1.5 rounded-full text-[9px] sm:text-xs font-[Rajdhani] font-semibold bg-white/10 text-white/80 backdrop-blur-sm border border-white/10">🆓 Free</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Separator -->
+    <div class="tg-separator relative bg-[#0a0a1a]">
+      <div class="absolute inset-0 flex items-center">
+        <div class="w-full h-[2px] bg-gradient-to-r from-transparent via-[#0088cc] to-transparent shadow-[0_0_8px_rgba(0,136,204,0.5)]"></div>
+      </div>
+      <div class="relative flex justify-center">
+        <div class="bg-[#0a0a1a] px-4">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-[#0088cc] drop-shadow-[0_0_6px_rgba(0,136,204,0.6)]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.504-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </div>
+      </div>
     </div>
-  </CategoryPage>
+
+    <!-- BLOC 2: Telecam Live — full width, ~half viewport -->
+    <a href="https://telecam.live/" target="_blank" rel="noopener" class="tg-hero group block relative overflow-hidden">
+      <img src="/images/tg-telecam.png" alt="Telecam — Watch Telegram Girls Live" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+
+      <!-- Telegram logo overlay -->
+      <div class="absolute bottom-3 right-3 sm:bottom-5 sm:right-5 opacity-60 group-hover:opacity-80 transition-opacity">
+        <svg class="w-12 h-12 sm:w-20 sm:h-20 text-[#0088cc] drop-shadow-[0_0_15px_rgba(0,136,204,0.6)]" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.96 6.504-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.492-1.302.48-.428-.013-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </div>
+
+      <div class="relative h-full flex flex-col justify-end p-5 sm:p-10">
+        <span class="self-start inline-flex items-center gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-[Orbitron] font-bold uppercase bg-red-600 text-white mb-2 sm:mb-3">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+          Live Now
+        </span>
+
+        <h2 class="font-[Bungee] text-2xl sm:text-5xl text-white leading-[0.95]" style="text-shadow: 0 2px 15px rgba(0,0,0,0.9);">
+          TELECAM<br/>LIVE GIRLS
+        </h2>
+        <p class="font-[Rajdhani] text-sm sm:text-lg text-gray-200 mt-1 sm:mt-2 max-w-md">Watch all Telegram girls live from their bedroom. Free, no signup.</p>
+
+        <div class="mt-3 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-3">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-red-600 text-white font-[Orbitron] text-xs sm:text-sm uppercase tracking-wider font-bold group-hover:bg-red-500 transition-all shadow-xl shadow-red-600/40 group-hover:shadow-red-600/60">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            Watch Live Now
+          </span>
+          <span class="px-3 py-1.5 rounded-full text-[9px] sm:text-xs font-[Rajdhani] font-semibold bg-white/10 text-white/80 backdrop-blur-sm border border-white/10">🆓 Free Access</span>
+          <span class="px-3 py-1.5 rounded-full text-[9px] sm:text-xs font-[Rajdhani] font-semibold bg-white/10 text-white/80 backdrop-blur-sm border border-white/10">🔄 24/7</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Sticky Footer: Telecam CTA -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 telecam-sticky">
+    <a href="https://telecam.live/" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 sm:gap-3 py-2.5 sm:py-3 bg-gradient-to-r from-red-700 via-red-600 to-pink-600 hover:from-red-600 hover:via-red-500 hover:to-pink-500 transition-all">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+      </span>
+      <span class="font-[Bungee] text-[11px] sm:text-sm text-white">TELECAM</span>
+      <span class="font-[Rajdhani] text-[10px] sm:text-xs text-white/80 hidden min-[360px]:inline">— Girls Live</span>
+      <span class="font-[Orbitron] text-[8px] sm:text-[10px] px-2 py-0.5 rounded-full bg-white/20 text-white font-bold uppercase">Free</span>
+    </a>
+  </div>
+
+  <style>
+    .tg-page {
+      /* 100svh minus header padding (pt-12=48px) and sticky footer (~40px) */
+      height: calc(100svh - 48px - 40px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .tg-hero {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .tg-separator {
+      flex: 0 0 20px;
+    }
+
+    @media (min-width: 640px) {
+      .tg-separator {
+        flex: 0 0 24px;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .tg-page {
+        height: calc(100svh - 64px - 44px);
+      }
+    }
+
+    .telecam-sticky {
+      box-shadow: 0 -4px 20px rgba(220, 38, 38, 0.5);
+    }
+  </style>
+
 </Layout>
