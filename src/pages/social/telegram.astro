@@ -98,7 +98,7 @@ import Layout from '../../layouts/Layout.astro';
   <style>
     .tg-page {
       /* 100svh minus header padding (pt-12=48px) and sticky footer (~40px) */
-      height: calc(100svh - 48px - 40px);
+      height: calc(100svh - 48px - 32px);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -121,12 +121,16 @@ import Layout from '../../layouts/Layout.astro';
 
     @media (min-width: 640px) {
       .tg-page {
-        height: calc(100svh - 64px - 44px);
+        height: calc(100svh - 64px - 36px);
       }
     }
 
     .telecam-sticky {
       box-shadow: 0 -4px 20px rgba(220, 38, 38, 0.5);
+    }
+
+    :global(footer) {
+      margin-top: 0 !important;
     }
   </style>
 
