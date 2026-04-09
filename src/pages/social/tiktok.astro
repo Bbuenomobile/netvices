@@ -1,48 +1,179 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CategoryPage from '../../components/CategoryPage.astro';
-import AffiliateBlock from '../../components/AffiliateBlock.astro';
 
-const features = [
-  { title: "Viral NSFW", text: "Adult content that goes viral. Creators who know how to push TikTok's limits.", icon: "🔥" },
-  { title: "Adult Creators", text: "The hottest TikTok creators with premium content. Follow the best in the game.", icon: "⭐" },
-  { title: "Live Streams", text: "Live adult streams and Q&A sessions. Interact with creators in real time.", icon: "📺" },
-  { title: "Trending Content", text: "Stay on top of the latest adult trends. Know what's hot before everyone else.", icon: "📈" },
-  { title: "Algorithm Hacks", text: "How the For You page works for adult content. Tips to see more of what you want.", icon: "🔧" },
-  { title: "Alt Platforms", text: "TikTok alternatives built for adult content. No censorship, no restrictions.", icon: "🔄" },
-];
-
-const articles = [
-  { title: "Best Adult TikTok Accounts", excerpt: "The top adult TikTok creators to follow. Curated list updated for 2026.", href: "/social/tiktok" },
-  { title: "TikTok Alternatives For NSFW Content", excerpt: "Platforms where adult creators post without restrictions. Full uncensored content.", href: "/social/tiktok" },
-  { title: "How Creators Bypass TikTok Rules", excerpt: "The tricks creators use to post adult content on TikTok. What works and what doesn't.", href: "/social/tiktok" },
-  { title: "From TikTok To OnlyFans Pipeline", excerpt: "How TikTok creators monetize with OnlyFans. The business model explained.", href: "/social/tiktok" },
+const videos = [
+  { src: "/videos/tiktok-vid1.mp4", username: "@hotblonde_22", desc: "Late night vibes 💋🔥", likes: "12.4K", comments: "892", cta: "Watch her live", ctaType: "personal" },
+  { src: "/videos/tiktok-vid2.mp4", username: "@mirrorgirl_x", desc: "Mirror mirror... 👀✨", likes: "8.7K", comments: "534", cta: "More girls live", ctaType: "general" },
+  { src: "/videos/tiktok-vid3.mp4", username: "@redhead_queen", desc: "Can't stop won't stop 💃🔥", likes: "15.1K", comments: "1.2K", cta: "Join her live", ctaType: "personal" },
+  { src: "/videos/tiktok-vid4.mp4", username: "@curlybabe_99", desc: "Shake it like that 🍑💦", likes: "22.3K", comments: "1.8K", cta: "More girls live", ctaType: "general" },
+  { src: "/videos/tiktok-vid5.mp4", username: "@asianqtpie", desc: "Surprise reveal 😏🎵", likes: "9.5K", comments: "678", cta: "Watch her live", ctaType: "personal" },
 ];
 ---
 
-<Layout title="TikTok Porn — Adult TikTok Content — NetVices" description="The uncensored side of TikTok. Adult creators, NSFW content, and viral videos that push boundaries. Plus alternatives for full adult content.">
-  <CategoryPage
-    title="TikTok Porn"
-    subtitle="The Uncensored Side of TikTok"
-    description="TikTok has an adult side most people never discover. From suggestive creators to NSFW content that pushes boundaries — and the alternative platforms where creators go when TikTok's rules get too strict. Your guide to adult short-form video."
-    color="#ff0050"
-    icon="🎵"
-    features={features}
-    articles={articles}
-    ctaText="Watch Now"
-    ctaHref="#"
-    heroImage="/images/vice-tiktok.png"
-  >
-    <div slot="affiliates">
-      <AffiliateBlock
-        color="#ff0050"
-        sectionTitle="Where TikTok Creators Go Uncensored"
-        offers={[
-          { name: "OnlyFans", tagline: "Where TikTok creators post what they can't on TikTok.", bonus: "FREE SIGN-UP", rating: 5, href: "#", color: "#00AFF0", badge: "#1 FOR TIKTOK" },
-          { name: "Fansly", tagline: "The new home for banned TikTok creators. Uncensored content.", bonus: "20% OFF", rating: 5, href: "#", color: "#ff6ec7", badge: "TRENDING" },
-          { name: "MYM Fans", tagline: "European TikTokers going wild. Exclusive behind-the-scenes.", bonus: "€10 FREE", rating: 4, href: "#", color: "#e80082" },
-        ]}
-      />
-    </div>
-  </CategoryPage>
+<Layout title="TikTok Porn — Sexy Dance Videos — NetVices" description="Watch the hottest sexy dance videos. Uncensored TikTok-style content with real girls.">
+
+  <div class="tt-feed" id="tt-feed">
+    {videos.map((vid, i) => (
+      <div class="tt-slide" data-index={i}>
+        <video
+          class="tt-video"
+          src={vid.src}
+          loop
+          muted
+          playsinline
+          preload={i === 0 ? "auto" : "metadata"}
+        />
+
+        {/* Gradient overlays */}
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+
+        {/* Right sidebar — TikTok style actions */}
+        <div class="absolute right-3 sm:right-4 bottom-32 sm:bottom-36 flex flex-col items-center gap-5 sm:gap-6 z-10">
+          {/* Like */}
+          <div class="flex flex-col items-center gap-1">
+            <button class="tt-action-btn" aria-label="Like">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <span class="text-white text-[10px] sm:text-xs font-[Rajdhani] font-bold">{vid.likes}</span>
+          </div>
+          {/* Comments */}
+          <div class="flex flex-col items-center gap-1">
+            <button class="tt-action-btn" aria-label="Comments">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </button>
+            <span class="text-white text-[10px] sm:text-xs font-[Rajdhani] font-bold">{vid.comments}</span>
+          </div>
+          {/* Share */}
+          <div class="flex flex-col items-center gap-1">
+            <button class="tt-action-btn" aria-label="Share">
+              <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+            </button>
+            <span class="text-white text-[10px] sm:text-xs font-[Rajdhani] font-bold">Share</span>
+          </div>
+        </div>
+
+        {/* Bottom info — username, description, CTA */}
+        <div class="absolute bottom-4 sm:bottom-6 left-3 sm:left-4 right-16 sm:right-20 z-10">
+          <p class="font-[Orbitron] text-sm sm:text-base text-white font-bold" style="text-shadow: 0 1px 6px rgba(0,0,0,0.8);">{vid.username}</p>
+          <p class="font-[Rajdhani] text-xs sm:text-sm text-white/90 mt-0.5" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">{vid.desc}</p>
+
+          {/* CTA button — TikTok ad style */}
+          <a href="https://telecam.live/" target="_blank" rel="noopener" class:list={["tt-cta group mt-2.5 sm:mt-3 inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-[Orbitron] text-[10px] sm:text-xs uppercase tracking-wider font-bold transition-all", vid.ctaType === "personal" ? "bg-[#ff0050] hover:bg-[#ff1a66] text-white shadow-lg shadow-[#ff0050]/40" : "bg-white hover:bg-gray-100 text-black shadow-lg"]}>
+            {vid.ctaType === "personal" ? (
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+              </span>
+            ) : (
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            )}
+            {vid.cta}
+          </a>
+        </div>
+
+        {/* Tap to unmute hint (first video only) */}
+        {i === 0 && (
+          <div class="tt-sound-hint absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+            <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-sm">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+              <span class="font-[Rajdhani] text-sm text-white font-semibold">Tap to unmute</span>
+            </div>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <style>
+    :global(main) {
+      padding-top: 0 !important;
+    }
+    :global(header) {
+      display: none !important;
+    }
+    :global(footer) {
+      display: none !important;
+      margin-top: 0 !important;
+    }
+
+    .tt-feed {
+      height: 100svh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .tt-slide {
+      height: 100svh;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .tt-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tt-action-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+      transition: transform 0.2s;
+    }
+    .tt-action-btn:hover {
+      transform: scale(1.15);
+    }
+
+    .tt-sound-hint {
+      animation: fadeOut 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeOut {
+      0%, 70% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <script>
+    const feed = document.getElementById('tt-feed');
+    const slides = document.querySelectorAll('.tt-slide');
+    let currentIndex = 0;
+    let isMuted = true;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        if (!video) return;
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+          video.muted = isMuted;
+          currentIndex = parseInt(entry.target.dataset.index);
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    }, { threshold: 0.6 });
+
+    slides.forEach(slide => observer.observe(slide));
+
+    feed?.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      isMuted = !isMuted;
+      const currentVideo = slides[currentIndex]?.querySelector('video');
+      if (currentVideo) currentVideo.muted = isMuted;
+      const hint = document.querySelector('.tt-sound-hint');
+      if (hint) hint.style.display = 'none';
+    });
+  </script>
+
 </Layout>
